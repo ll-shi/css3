@@ -1,0 +1,9 @@
+.test,.demo{
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    background-image: radial-gradient(circle farthest-corner,#f00,#ff0,#080);
+}
+.demo{
+    background-image: linear-gradient(to right,#f40,#333);
+}

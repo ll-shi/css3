@@ -1,0 +1,46 @@
+        /* 字体格式
+        truetype 微软 苹果        .ttf
+        opentype 微软 abode       .opt
+        woff   前面2个的合体版本   .woff  兼容性不是很好
+                                  .eat
+                                  .svg
+        MIME(.ttf .txt .pdf)
+        MIME里面其实也没有啥，就是一个保存了一个映射关系列表
+        .ttf------->application/.... 比如.ttf文件就映射到后面的插件来打开.ttf文件。 
+        最早是一个邮件协议，后来也作为打开一些后缀文件的协议
+        浏览器本身不能打开文件，但是浏览器可以借助MIME协议来让操作系统替浏览器打开相关的文件
+        协议不是实时的，是内置的。所以以前的浏览器的MIME类型就比较少，所以能打开的文件也比较少。
+        因为没有映射，找不到打开文件。
+        第二个点：就算浏览器能识别后缀文件，可能因为兼容性的原因不允许打开，所以也要引入多种格式的字体。
+        format()是为了兼容老版浏览器，有点添加一个映射强制打开的意思。
+         */
+         @font-face {
+            /* 引入字体样式 */
+            /* 自定义字体名 */
+            /* 字体格式，不同的拓展名表示不同的字体格式 */
+            font-family: 'llshi';
+            src: url();
+
+        }
+
+        div {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto auto;
+            width: 200px;
+            height: 100px;
+            /* line-height: 100px;
+            text-align: center; */
+            font-size: 20px;
+            border: 1px solid #ddd;
+            /* white-space可以保留我们的文本格式，比如在文字前面写多个空格，就不会去重，仍然保留格式
+             */
+            /* white-space: pre; */
+            /* white-space: pre; 使用换行的时候不要使用white-space:pre;优先级比word-break高*/
+            /* white-space: normal;也有换行的功效 */
+            /* break-word对英文字母有优化效果，尽量让一个完整的单词独占一行 */
+            word-break: break-word;
+        }

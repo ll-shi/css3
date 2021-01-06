@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       :root {
+            background-color: #000;
+        }
+
+        .shadow {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: transparent;
+            left: calc(50% - 50px);
+            top: calc(50% - 50px);
+            border: 1px solid skyblue;
+            /* 参数 第一个水平偏移量，第二个表示垂直偏移量,第三个表示模糊值，第四个表示扩散值，第五个表示阴影的颜色也就是上下左右大小同时增加量
+            模糊值是基于边框两边同时虚化。
+            */
+            /* 不加insert表示外阴影 */
+            /* box-shadow: 50px 50px 20px 20px #0ff; */
+            box-shadow: inset 0px 0px 10px 0px #fff,
+                3px 0px 10px 0px #f0f,
+                0px -3px 10px 0px #0ff,
+                -3px 0px 10px 0px #00f,
+                0px 3px 10px 0px #ff0;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="shadow"></div>
+</body>
+</html>
